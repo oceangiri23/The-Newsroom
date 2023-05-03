@@ -17,15 +17,14 @@ export class News extends Component {
   }
 
 
-constructor(){
-super();
+constructor(props){
+super(props);
 this.state = {
         articles: [],
         loading: false,
-        page:1,
-
-    
+        page:1
 }
+document.title = `${this.props.category}-Newsroom`;
 }
 
 async componentDidMount(){
@@ -69,12 +68,13 @@ if (!(this.state.page + 1 > Math.ceil(this.state.totalResults/this.props.pageSiz
   render() {
     return (
       <div className='container my-3'>
-        <h2 className='text-center'>The Newsroom - Top Headlines</h2>
+        <h2 className='text-center' style={{margin: "35px 0px "}}>The Newsroom - Top Headlines </h2>
         {this.state.loading && <Spinner/>}
         <div className="row">
           {this.state.articles.map((element)=>{
               return     <div className="col-md-4" key={element.url}>
-              <NewsItem  title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""} imageUrl={element.urlToImage} newsUrl={element.url}/>
+              <NewsItem  title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""}
+               imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} />
           </div>
           })}
             </div>
