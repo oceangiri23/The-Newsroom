@@ -67,8 +67,8 @@ if (!(this.state.page + 1 > Math.ceil(this.state.totalResults/this.props.pageSiz
 
   render() {
     return (
-      <div className='container my-3'>
-        <h2 className='text-center' style={{margin: "35px 0px "}}>The Newsroom - Top Headlines </h2>
+      <div className='container my-3  .box'>
+        <h2 className='text-center' style={{margin: "35px 0px ", marginTop: "90px"}}>The Newsroom - Top Headlines </h2>
         {this.state.loading && <Spinner/>}
         <div className="row">
           {this.state.articles.map((element)=>{
