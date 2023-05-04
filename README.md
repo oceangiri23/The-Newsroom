@@ -1,6 +1,17 @@
 # Getting Started with Create React App
+The-Newsroom is a news site  which uses API to get news data and displays it in interactive manner. It is developed using react framework.
+![image](https://user-images.githubusercontent.com/115062415/236280602-abf5d2ef-2d10-4f45-923e-0b0d7b1a4a77.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+
+
+
+
+
+
+
+
 
 ## Available Scripts
 
